@@ -108,7 +108,7 @@ function HomePage() {
             </Button>
           </Box>
         </Box>
-        <Typography variant="h4" sx={{ ml: 1, alignSelf: "flex-start" }}>
+        <Typography variant="h4" sx={{ ml: 1, textAlign: "center", mb: 3 }}>
           🎥{" "}
           {genre === "27"
             ? "Horror"
@@ -137,6 +137,7 @@ function HomePage() {
 
         <AllMovie data={data_movie} />
         <Pagination
+          size="small"
           count={100}
           color="primary"
           sx={{ alignSelf: "center", m: 2 }}

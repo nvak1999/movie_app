@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import { Button } from "@mui/material";
@@ -6,11 +6,6 @@ import useAuth from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 function MainHeader() {
-  const [widthHeader, setWidthHeader] = useState(0);
-  const ref = useRef(null);
-  useEffect(() => {
-    setWidthHeader(ref.current.clientWidth);
-  }, []);
   const auth = useAuth();
   let navigate = useNavigate();
 
@@ -19,7 +14,6 @@ function MainHeader() {
   }
   return (
     <Box
-      ref={ref}
       sx={{
         display: "flex",
         justifyContent: "space-around",
@@ -51,8 +45,9 @@ function MainHeader() {
             }}
           >
             <h2 style={{ margin: 10 }}>
-              {/* {auth.user.username === "" ? "Guess" : auth.user.username} */}
-              {widthHeader < 500 ? "" : auth.user.username}
+              {auth.user.username === ""
+                ? "Guess"
+                : auth.user.username.slice(0, 10)}
             </h2>
             <Button
               sx={{ height: 30, minWidth: 20 }}
