@@ -36,6 +36,9 @@ function HomePage() {
         const reponse = await apiService.get(
           `3/discover/movie?api_key=${API_KEY}&language=en-US&page=${page}&with_genres=${genre}&with_keywords=${keywords}&with_watch_monetization_types=flatrate`
         );
+        console.log(
+          `3/discover/movie?api_key=${API_KEY}&language=en-US&page=${page}&with_genres=${genre}&with_keywords=${keywords}&with_watch_monetization_types=flatrate`
+        );
         const data = reponse.data.results;
         setData_movie(data);
         console.log(keywords);
