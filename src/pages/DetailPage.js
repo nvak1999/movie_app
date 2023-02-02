@@ -13,7 +13,7 @@ function DetailPage() {
         const reponse = await apiService.get(
           `3/movie/${params.id}?api_key=${API_KEY}&language=en-US`
         );
-        const dataMovie = await reponse.data;
+        const dataMovie = reponse.data;
         setData(dataMovie);
       } catch (error) {
         console.log(error);
