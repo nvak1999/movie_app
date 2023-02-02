@@ -10,7 +10,7 @@ function Film({ film_data }) {
     <Card
       sx={{
         maxWidth: 340,
-        minWidth: 340,
+        minWidth: 280,
         minHeight: 300,
         maxHeight: 380,
         display: "flex",
