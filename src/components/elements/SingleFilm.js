@@ -10,11 +10,11 @@ import Chip from "@mui/material/Chip";
 function SingleFilm({ data }) {
   return (
     <Box sx={{ display: "flex", justifyContent: "center", m: 5 }}>
-      <Card sx={{ maxWidth: 700, minWidth: 300 }}>
+      <Card sx={{ maxWidth: 700, minWidth: 370 }}>
         <CardActionArea>
           <CardMedia
             component="img"
-            minWidth="250"
+            minWidth="280"
             image={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
             alt="green iguana"
           />
