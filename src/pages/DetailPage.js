@@ -15,13 +15,12 @@ function DetailPage() {
         );
         const dataMovie = await reponse.data;
         setData(dataMovie);
-        console.log(data);
       } catch (error) {
         console.log(error);
       }
     };
     fetchData();
-  }, []);
+  }, [data, params.id]);
 
   return (
     <Box>
