@@ -12,7 +12,6 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import { BASE_URL } from "../app/config";
 
 function HomePage() {
   const [page, setPage] = useState(1);
@@ -38,7 +37,7 @@ function HomePage() {
           `3/discover/movie?api_key=${API_KEY}&language=en-US&page=${page}&with_genres=${genre}&with_keywords=${keywords}&with_watch_monetization_types=flatrate`
         );
         console.log(
-          `${BASE_URL}3/discover/movie?api_key=${API_KEY}&language=en-US&page=${page}&with_genres=${genre}&with_keywords=${keywords}&with_watch_monetization_types=flatrate`
+          `3/discover/movie?api_key=${API_KEY}&language=en-US&page=${page}&with_genres=${genre}&with_keywords=${keywords}&with_watch_monetization_types=flatrate`
         );
         const data = reponse.data.results;
         setData_movie(data);
