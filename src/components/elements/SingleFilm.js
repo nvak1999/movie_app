@@ -6,7 +6,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
 
 function SingleFilm({ data }) {
   return (
