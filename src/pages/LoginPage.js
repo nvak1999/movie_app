@@ -24,7 +24,7 @@ function LoginPage() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <Box component="form" onSubmit={handleSubmit}>
         <Box
           sx={{
             display: "flex",
@@ -33,25 +33,29 @@ function LoginPage() {
             alignItems: "center",
           }}
         >
-          <Typography variant="h2">Unlimited movies, TV</Typography>
-          <Typography variant="h2">shows, and more.</Typography>
+          <Typography textAlign={"center"} variant="h2">
+            Unlimited movies, TV
+          </Typography>
+          <Typography textAlign={"center"} variant="h2">
+            shows, and more.
+          </Typography>
 
           <TextField
             id="outlined-basic"
             name="username"
             label="Enter your name"
             variant="outlined"
-            sx={{ width: 400, mt: 5 }}
+            sx={{ width: 350, mt: 5 }}
           />
           <Button
-            sx={{ width: 400, height: 50, mt: 1 }}
+            sx={{ width: 350, height: 50, mt: 1 }}
             variant="outlined"
             type="submit"
           >
             Get Started
           </Button>
         </Box>
-      </form>
+      </Box>
     </div>
   );
 }

@@ -43,13 +43,17 @@ function MainHeader() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              flexWrap: "wrap",
               m: 1,
               mr: 2,
             }}
           >
-            <h2 style={{ margin: 10 }}>Welcome {auth.user?.username}</h2>
+            <h2 style={{ margin: 10 }}>
+              {" "}
+              {auth.user.username === "" ? "Guess" : auth.user.username}
+            </h2>
             <Button
-              sx={{ height: 30 }}
+              sx={{ height: 30, minWidth: 20 }}
               variant="contained"
               color="success"
               onClick={() => {

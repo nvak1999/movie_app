@@ -58,7 +58,14 @@ function HomePage() {
           alignItems: "center",
         }}
       >
-        <Box sx={{ display: "flex", justifyContent: "space-between", mt: 3 }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            m: 3,
+          }}
+        >
           <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
             <InputLabel id="ddemo-simple-select-standard-label">
               Genres
@@ -85,7 +92,7 @@ function HomePage() {
           </FormControl>
           <Box>
             <TextField
-              sx={{ ml: 15, height: 50 }}
+              sx={{ height: 50 }}
               id="outlined-basic"
               label="Search"
               variant="outlined"
