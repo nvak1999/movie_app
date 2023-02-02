@@ -15,7 +15,11 @@ function SingleFilm({ data }) {
           <CardMedia
             component="img"
             minWidth="280"
-            image={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
+            image={
+              data.backdrop_path === null
+                ? `/noimg.jpg`
+                : `https://image.tmdb.org/t/p/w500${data.backdrop_path}`
+            }
             alt="green iguana"
           />
           <CardContent>
