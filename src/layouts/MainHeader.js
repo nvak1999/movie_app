@@ -44,8 +44,8 @@ function MainHeader() {
               justifyContent: "center",
               alignItems: "center",
               flexWrap: "wrap",
-              m: 1,
-              mr: 2,
+              mb: 1,
+              mr: 1,
             }}
           >
             <h2 style={{ margin: 10 }}>

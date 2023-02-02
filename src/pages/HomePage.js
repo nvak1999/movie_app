@@ -67,7 +67,7 @@ function HomePage() {
             m: 3,
           }}
         >
-          <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+          <FormControl variant="standard" sx={{ m: 2, minWidth: 120 }}>
             <InputLabel id="ddemo-simple-select-standard-label">
               Genres
             </InputLabel>
@@ -91,7 +91,7 @@ function HomePage() {
               <MenuItem value="27">Horror</MenuItem>
             </Select>
           </FormControl>
-          <Box>
+          <Box sx={{ m: 2 }}>
             <TextField
               sx={{ height: 50 }}
               id="outlined-basic"
@@ -108,7 +108,7 @@ function HomePage() {
             </Button>
           </Box>
         </Box>
-        <Typography variant="h4" sx={{ alignSelf: "flex-start" }}>
+        <Typography variant="h4" sx={{ ml: 1, alignSelf: "flex-start" }}>
           🎥{" "}
           {genre === "27"
             ? "Horror"
