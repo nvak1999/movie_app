@@ -23,8 +23,11 @@ function Film({ film_data }) {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="200"
-          image={`https://image.tmdb.org/t/p/w500${film_data.backdrop_path}`}
+          image={
+            film_data.backdrop_path === null
+              ? `/noimg.jpg`
+              : `https://image.tmdb.org/t/p/w500${film_data.backdrop_path}`
+          }
           alt="green iguana"
         />
         <CardContent>

@@ -42,7 +42,7 @@ function HomePage() {
 
         const data = reponse.data.results;
         setData_movie(data);
-        console.log(keywords);
+        console.log(data);
       } catch (error) {
         console.log(error);
       }
