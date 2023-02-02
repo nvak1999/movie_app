@@ -30,11 +30,7 @@ function MainHeader() {
         >
           <Box sx={{ m: 1 }}>
             <Link to="/">
-              <img
-                src="https://xemphim1080.com/assets/img/phim1080.png"
-                alt=""
-                width={200}
-              />
+              <img src="../logo.png" alt="" width={200} />
             </Link>
           </Box>
 
