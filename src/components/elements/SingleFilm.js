@@ -9,8 +9,8 @@ import Chip from "@mui/material/Chip";
 
 function SingleFilm({ data }) {
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", m: 5 }}>
-      <Card sx={{ maxWidth: 700, minWidth: 370 }}>
+    <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+      <Card sx={{ minWidth: 370 }}>
         <CardActionArea>
           <CardMedia
             component="img"

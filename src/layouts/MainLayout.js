@@ -8,7 +8,7 @@ function MainLayout() {
       <Stack>
         <MainHeader />
         <Outlet />
-        <Box sx={{ flexGrow: 1 }} />
+        <Box />
       </Stack>
     </div>
   );
