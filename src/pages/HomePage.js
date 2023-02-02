@@ -93,7 +93,7 @@ function HomePage() {
           </FormControl>
           <Box sx={{ m: 2 }}>
             <TextField
-              sx={{ height: 50 }}
+              sx={{ height: 50, width: 180 }}
               id="outlined-basic"
               label="Search"
               variant="outlined"
