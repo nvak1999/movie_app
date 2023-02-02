@@ -14,13 +14,16 @@ import { Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 function HomePage() {
+  const [section, setSection] = useState("discover");
   const [page, setPage] = useState(1);
   const [data_movie, setData_movie] = useState([]);
-  const [genre, setgenre] = useState("Top movie");
+  const [genre, setgenre] = useState("");
   const [keywords, setkeywords] = useState("");
   const [search, setSearch] = useState("");
   const handleChange_keywords = () => {
     setkeywords(search);
+    if (search === "") setSection("discover");
+    else setSection("search");
   };
   const handleChange_genres = (event) => {
     setgenre(event.target.value);
@@ -34,11 +37,9 @@ function HomePage() {
     const fetchData = async () => {
       try {
         const reponse = await apiService.get(
-          `3/discover/movie?api_key=${API_KEY}&language=en-US&page=${page}&with_genres=${genre}&with_keywords=${keywords}&with_watch_monetization_types=flatrate`
+          `3/${section}/movie?api_key=${API_KEY}&language=en-US&query=${keywords}&page=${page}&with_genres=${genre}`
         );
-        console.log(
-          `3/discover/movie?api_key=${API_KEY}&language=en-US&page=${page}&with_genres=${genre}&with_keywords=${keywords}&with_watch_monetization_types=flatrate`
-        );
+
         const data = reponse.data.results;
         setData_movie(data);
         console.log(keywords);
@@ -47,7 +48,7 @@ function HomePage() {
       }
     };
     fetchData();
-  }, [page, genre, keywords]);
+  }, [page, genre, keywords, section]);
   return (
     <Box>
       <Box
@@ -145,5 +146,6 @@ function HomePage() {
     </Box>
   );
 }
-
+//https://api.themoviedb.org/3/search/movie?api_key=cdd5bb9137d22c4861f2012cb48618e2&language=en-US&query=ss&page=1&include_adult=false&with_genres=
+//https://api.themoviedb.org/3/discover/movie?api_key=cdd5bb9137d22c4861f2012cb48618e2&language=en-US&query=boss&page=1&with_genres=
 export default HomePage;
