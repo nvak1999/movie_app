@@ -22,6 +22,7 @@ function HomePage() {
   const [search, setSearch] = useState("");
   const handleChange_keywords = () => {
     setkeywords(search);
+    setPage(1);
     if (search === "") setSection("discover");
     else setSection("search");
   };
@@ -29,6 +30,7 @@ function HomePage() {
     setgenre(event.target.value);
     setkeywords("");
     setSection("discover");
+    setPage(1);
   };
 
   const handleChange_page = (event, value) => {
@@ -139,6 +141,7 @@ function HomePage() {
 
         <AllMovie data={data_movie} />
         <Pagination
+          page={page}
           size="small"
           count={100}
           color="primary"
