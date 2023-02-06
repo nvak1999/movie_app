@@ -6,7 +6,7 @@ function AllMovie({ data }) {
   return (
     <Grid container wrap="wrap">
       {data
-        .filter((e) => e.backdrop_path !== null)
+        .filter((e) => e.poster_path && e.poster_path !== null)
         .map((e) => (
           <Grid container justifyContent="center" lg={3} md={4} xs={12}>
             <Link style={{ textDecoration: "none" }} to={`/movie/${e.id}`}>

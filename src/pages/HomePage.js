@@ -27,6 +27,8 @@ function HomePage() {
   };
   const handleChange_genres = (event) => {
     setgenre(event.target.value);
+    setkeywords("");
+    setSection("discover");
   };
 
   const handleChange_page = (event, value) => {
@@ -42,13 +44,12 @@ function HomePage() {
 
         const data = reponse.data.results;
         setData_movie(data);
-        console.log(data);
       } catch (error) {
         console.log(error);
       }
     };
     fetchData();
-  }, [page, genre, keywords, section]);
+  }, [page, genre, keywords, search, section]);
   return (
     <Box>
       <Box
@@ -97,6 +98,7 @@ function HomePage() {
               id="outlined-basic"
               label="Search"
               variant="outlined"
+              value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
             <Button
@@ -109,7 +111,7 @@ function HomePage() {
           </Box>
         </Box>
         <Typography variant="h4" sx={{ ml: 1, textAlign: "center", mb: 3 }}>
-          🎥{" "}
+          🎥
           {genre === "27"
             ? "Horror"
             : genre === "28"
@@ -147,6 +149,5 @@ function HomePage() {
     </Box>
   );
 }
-//https://api.themoviedb.org/3/search/movie?api_key=cdd5bb9137d22c4861f2012cb48618e2&language=en-US&query=ss&page=1&include_adult=false&with_genres=
-//https://api.themoviedb.org/3/discover/movie?api_key=cdd5bb9137d22c4861f2012cb48618e2&language=en-US&query=boss&page=1&with_genres=
+
 export default HomePage;
